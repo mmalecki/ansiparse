@@ -28,6 +28,14 @@ var dataSets = {
   background: {
     input: '\033\[42mhello world\033\[49m',
     output: [{ text: 'hello world', background: 'green' }]
+  },
+  boldAndColor: {
+    input: 'hello world'.red.bold,
+    output: [{ text: 'hello world', bold: true, foreground: 'red' }]
+  },
+  noColor: {
+    input: 'hello world',
+    output: [{ text: 'hello world' }]
   }
 };
 
