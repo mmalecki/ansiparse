@@ -1,4 +1,4 @@
-# ansiparse
+# ansiparse [![Build Status](https://secure.travis-ci.org/mmalecki/ansiparse.png)](http://travis-ci.org/mmalecki/ansiparse)
 Copyright (C) 2011 by Maciej Małecki  
 MIT License (see LICENSE file)
 
