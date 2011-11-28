@@ -40,6 +40,13 @@ var dataSets = {
   'unfinished color': {
     input: '\033\[32mhello world',
     output: [{ text: 'hello world', foreground: 'green' }]
+  },
+  nested: {
+    input: ('hello ' + 'world'.red).green,
+    output: [
+      { text: 'hello ', foreground: 'green' },
+      { text: 'world', foreground: 'red' }
+    ]
   }
 };
 
