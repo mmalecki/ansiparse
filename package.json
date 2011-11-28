@@ -1,0 +1,22 @@
+{
+  "author": "Maciej Małecki <maciej.malecki@notimplemented.org>",
+  "name": "ansiparse",
+  "description": "Parse ANSI color codes",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mmalecki/ansiparse.git"
+  },
+  "main": "./lib/ansiparse",
+  "scripts": {
+    "test": "vows --spec"
+  },
+  "engines": {
+    "node": ">= 0.4"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "colors": "0.5.x",
+    "vows": "0.6.x"
+  }
+}
