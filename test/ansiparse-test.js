@@ -36,6 +36,10 @@ var dataSets = {
   noColor: {
     input: 'hello world',
     output: [{ text: 'hello world' }]
+  },
+  'unfinished color': {
+    input: '\033\[32mhello world',
+    output: [{ text: 'hello world', foreground: 'green' }]
   }
 };
 
