@@ -54,6 +54,10 @@ var dataSets = {
       { text: 'hello ', foreground: 'green' },
       { text: 'world', foreground: 'red' }
     ]
+  },
+  grey: {
+    input: 'hello world'.grey,
+    output: [{ text: 'hello world', foreground: 'grey' }]
   }
 };
 
