@@ -33,6 +33,13 @@ var dataSets = {
     input: 'hello world'.red.bold,
     output: [{ text: 'hello world', bold: true, foreground: 'red' }]
   },
+  'partly bolded': {
+    input: 'hello '.bold + 'world'.red,
+    output: [
+      { text: 'hello ', bold: true },
+      { text: 'world', foreground: 'red', bold: false }
+    ]
+  },
   noColor: {
     input: 'hello world',
     output: [{ text: 'hello world' }]
