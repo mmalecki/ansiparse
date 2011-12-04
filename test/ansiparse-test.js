@@ -63,6 +63,7 @@ function getTopics() {
     topics['when using ' + set + ' data set'] = {
       topic: ansiparse(dataSets[set].input),
       'should return correct output': function (result) {
+        console.log('\n  Input: ' + dataSets[set].input);
         assert.isArray(result);
         assert.deepEqual(result, dataSets[set].output);
       }
