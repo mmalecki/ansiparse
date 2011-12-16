@@ -58,6 +58,10 @@ var dataSets = {
   grey: {
     input: 'hello world'.grey,
     output: [{ text: 'hello world', foreground: 'grey' }]
+  },
+  'malformed control sequence': {
+    input: '\033A string between two ESC\033',
+    output: [ { text: '\033A string between two ESC\033' } ]
   }
 };
 
