@@ -62,6 +62,14 @@ var dataSets = {
   'malformed control sequence': {
     input: '\033A string between two ESC\033',
     output: [ { text: '\033A string between two ESC\033' } ]
+  },
+  'simple backspace': {
+    input: 'hello '.green + 'worz\bld'.red,
+    output: [{ text: 'hello ', foreground: 'green' }, { text: 'world', foreground: 'red' }]
+  },
+  'backspace across blocks': {
+    input: 'hello'.green + ' ' + 'worz\b\b\b\b\bl    \b\b\b\b'.red,
+    output: [{ text: 'hello', foreground: 'green' }, { text: 'l', foreground: 'red' }]
   }
 };
 
