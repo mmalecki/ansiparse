@@ -29,6 +29,10 @@ var dataSets = {
     input: '\033\[42mhello world\033\[49m',
     output: [{ text: 'hello world', background: 'green' }]
   },
+  inverse: {
+    input: 'hello world'.red.inverse,
+    output: [{ text: 'hello world', background: 'red' }]
+  },
   boldAndColor: {
     input: 'hello world'.red.bold,
     output: [{ text: 'hello world', bold: true, foreground: 'red' }]
