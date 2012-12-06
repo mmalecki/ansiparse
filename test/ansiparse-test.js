@@ -70,6 +70,14 @@ var dataSets = {
   'backspace across blocks': {
     input: 'hello'.green + ' ' + 'worz\b\b\b\b\bl    \b\b\b\b'.red,
     output: [{ text: 'hello', foreground: 'green' }, { text: 'l', foreground: 'red' }]
+  },
+  'clear to beginning of line': {
+    input: 'hello\nthis will be removed\033\[1Kworld',
+    output: [{ text: 'hello\nworld'}]
+  },
+  'clear to end of line': {
+    input: 'hello world\033\[0Kthis will be removed\nThis should still be here',
+    output: [{ text: 'hello world\nThis should still be here' }]
   }
 };
 
