@@ -1,5 +1,4 @@
 var assert = require('assert'),
-    vows = require('vows'),
     ansiparse = require('../');
 
 require('colors');
@@ -73,22 +72,9 @@ var dataSets = {
   }
 };
 
-function getTopics() {
-  var topics = {};
-  Object.keys(dataSets).forEach(function (set) {
-    topics['when using ' + set + ' data set'] = {
-      topic: ansiparse(dataSets[set].input),
-      'should return correct output': function (result) {
-        console.log('\n  Input: ' + dataSets[set].input);
-        assert.isArray(result);
-        assert.deepEqual(result, dataSets[set].output);
-      }
-    };
-  });
-  return topics;
-}
-
-vows.describe('ansiparse').addBatch({
-  'When using ansiparse': getTopics()
-}).export(module);
-
+Object.keys(dataSets).forEach(function (set) {
+  const parsed = ansiparse(dataSets[set].input)
+  console.log('\n  Input: ' + dataSets[set].input);
+  assert(Array.isArray(parsed))
+  assert.deepEqual(parsed, dataSets[set].output);
+})
